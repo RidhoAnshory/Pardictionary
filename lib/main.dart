@@ -11,28 +11,29 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         theme: ThemeData(primaryColor: Colors.white, buttonColor: Colors.green),
         home: Scaffold(
-            appBar: AppBar(
-              elevation: 0,
-              leading: new IconButton(
-                color: Colors.green,
-                icon: Icon(Icons.menu),
-                onPressed: () {},
-                tooltip: 'Menu',
-              ),
-              centerTitle: true,
-              title: Text(
-                'Pardictionary',
-                style: TextStyle(fontWeight: FontWeight.bold),
-              ),
-              actions: <Widget>[
-                IconButton(
-                  icon: Icon(Icons.question_answer_outlined),
-                  tooltip: 'FAQ',
-                  color: Colors.green,
-                  onPressed: () {},
-                )
-              ],
+          appBar: AppBar(
+            elevation: 0,
+            leading: new IconButton(
+              color: Colors.green,
+              icon: Icon(Icons.menu),
+              onPressed: () {},
+              tooltip: 'Menu',
             ),
-            body: MenuList()));
+            centerTitle: true,
+            title: Text(
+              'Pardictionary',
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
+            actions: <Widget>[
+              IconButton(
+                icon: Icon(Icons.question_answer_outlined),
+                tooltip: 'FAQ',
+                color: Colors.green,
+                onPressed: () {},
+              )
+            ],
+          ),
+          body: MenuList(),
+        ));
   }
 }

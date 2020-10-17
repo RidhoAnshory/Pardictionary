@@ -1,3 +1,4 @@
+import 'package:Pardictionary/widgets/vocab-page/vocab_list.dart';
 import 'package:flutter/material.dart';
 
 class VocabPage extends StatelessWidget {
@@ -10,8 +11,6 @@ class VocabPage extends StatelessWidget {
           title: Text('Vocabulary'),
           elevation: 0,
         ),
-        body: Center(
-          child: Text('Vocabulary Page'),
-        ));
+        body: VocabularyList());
   }
 }

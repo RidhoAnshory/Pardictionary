@@ -1,3 +1,4 @@
+import 'package:Pardictionary/widgets/reading-page/reading_list.dart';
 import 'package:flutter/material.dart';
 
 class ReadingPage extends StatelessWidget {
@@ -10,8 +11,9 @@ class ReadingPage extends StatelessWidget {
           title: Text('Reading'),
           elevation: 0,
         ),
-        body: Center(
-          child: Text('Reading Page'),
+        body: Container(
+          margin: EdgeInsets.only(top: 10),
+          child: ReadingList(),
         ));
   }
 }

@@ -1,3 +1,5 @@
+import 'package:toast/toast.dart';
+
 import './conversation-page/conversation_main_page.dart';
 
 import './vocab-page/vocab_main_page.dart';
@@ -49,7 +51,6 @@ class _ListMenu extends StatelessWidget {
           onTap: () {
             Navigator.push(
                 context, MaterialPageRoute(builder: (context) => VocabPage()));
-            ;
           },
           child: Card(
             color: Colors.greenAccent[400],
@@ -62,6 +63,8 @@ class _ListMenu extends StatelessWidget {
                     style: TextStyle(
                         color: Colors.white, fontWeight: FontWeight.bold),
                   ),
+                  subtitle:
+                      Text('KosaKata', style: TextStyle(color: Colors.white)),
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
@@ -148,7 +151,7 @@ class _ListMenu extends StatelessWidget {
         ),
         InkWell(
           onTap: () {
-            print('object');
+            Toast.show("Coming Soon!", context);
           },
           child: Card(
             color: Colors.greenAccent[400],
@@ -157,7 +160,7 @@ class _ListMenu extends StatelessWidget {
               children: [
                 new ListTile(
                   title: Text(
-                    'Vocabulary',
+                    'Listening',
                     style: TextStyle(
                         color: Colors.white, fontWeight: FontWeight.bold),
                   ),
@@ -180,7 +183,7 @@ class _ListMenu extends StatelessWidget {
         ),
         InkWell(
           onTap: () {
-            print('object');
+            Toast.show("Coming Soon!", context);
           },
           child: Card(
             color: Colors.greenAccent[400],
@@ -189,7 +192,7 @@ class _ListMenu extends StatelessWidget {
               children: [
                 new ListTile(
                   title: Text(
-                    'Vocabulary',
+                    'Dictionary',
                     style: TextStyle(
                         color: Colors.white, fontWeight: FontWeight.bold),
                   ),
@@ -212,7 +215,7 @@ class _ListMenu extends StatelessWidget {
         ),
         InkWell(
           onTap: () {
-            print('object');
+            Toast.show("Coming Soon!", context);
           },
           child: Card(
             color: Colors.greenAccent[400],
@@ -221,7 +224,7 @@ class _ListMenu extends StatelessWidget {
               children: [
                 new ListTile(
                   title: Text(
-                    'Vocabulary',
+                    'Grammar',
                     style: TextStyle(
                         color: Colors.white, fontWeight: FontWeight.bold),
                   ),

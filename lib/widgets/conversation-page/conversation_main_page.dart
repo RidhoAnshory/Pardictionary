@@ -1,3 +1,4 @@
+import 'package:Pardictionary/widgets/conversation-page/conversation_list.dart';
 import 'package:flutter/material.dart';
 
 class ConversationPage extends StatelessWidget {
@@ -10,8 +11,6 @@ class ConversationPage extends StatelessWidget {
           title: Text('Conversation'),
           elevation: 0,
         ),
-        body: Center(
-          child: Text('Conversation Page'),
-        ));
+        body: ConversationList());
   }
 }
