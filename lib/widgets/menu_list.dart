@@ -119,7 +119,6 @@ class _ListMenu extends StatelessWidget {
           onTap: () {
             Navigator.push(context,
                 MaterialPageRoute(builder: (context) => ConversationPage()));
-            ;
           },
           child: Card(
             color: Colors.greenAccent[400],
