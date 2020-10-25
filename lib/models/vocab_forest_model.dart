@@ -18,7 +18,7 @@ class VocabForest {
 
 final List<VocabForest> vocabsforest = [
   VocabForest(
-      imgUrl: 'assets/images/forest.jpg',
+      imgUrl: 'assets/images/vocabs/hutan/forest.jpg',
       eng: 'For·est',
       engPron: 'ˈfôrəst',
       ind: 'Hutan',
@@ -26,7 +26,7 @@ final List<VocabForest> vocabsforest = [
       example:
           'Tropical rain forests used to cover 10% of the earth`s surface.'),
   VocabForest(
-      imgUrl: 'assets/images/forest.jpg',
+      imgUrl: 'assets/images/vocabs/hutan/tree.jpg',
       eng: 'For·est',
       engPron: 'ˈfôrəst',
       ind: 'Hutan',
@@ -34,7 +34,7 @@ final List<VocabForest> vocabsforest = [
       example:
           'Tropical rain forests used to cover 10% of the earth`s surface.'),
   VocabForest(
-      imgUrl: 'assets/images/forest.jpg',
+      imgUrl: 'assets/images/vocabs/hutan/wood.jpg',
       eng: 'For·est',
       engPron: 'ˈfôrəst',
       ind: 'Hutan',
@@ -42,7 +42,7 @@ final List<VocabForest> vocabsforest = [
       example:
           'Tropical rain forests used to cover 10% of the earth`s surface.'),
   VocabForest(
-      imgUrl: 'assets/images/forest.jpg',
+      imgUrl: 'assets/images/vocabs/hutan/coservation.jpg',
       eng: 'For·est',
       engPron: 'ˈfôrəst',
       ind: 'Hutan',

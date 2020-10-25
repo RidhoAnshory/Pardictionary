@@ -16,9 +16,9 @@ class VocabHotel {
   });
 }
 
-final List<VocabHotel> vocabsforest = [
+final List<VocabHotel> vocabshotel = [
   VocabHotel(
-      imgUrl: 'assets/images/forest.jpg',
+      imgUrl: 'assets/images/vocabs/hotel/concierge.jpg',
       eng: 'For·est',
       engPron: 'ˈfôrəst',
       ind: 'Hutan',
@@ -26,7 +26,7 @@ final List<VocabHotel> vocabsforest = [
       example:
           'Tropical rain forests used to cover 10% of the earth`s surface.'),
   VocabHotel(
-      imgUrl: 'assets/images/forest.jpg',
+      imgUrl: 'assets/images/vocabs/hotel/lobby.jpg',
       eng: 'For·est',
       engPron: 'ˈfôrəst',
       ind: 'Hutan',
@@ -34,7 +34,7 @@ final List<VocabHotel> vocabsforest = [
       example:
           'Tropical rain forests used to cover 10% of the earth`s surface.'),
   VocabHotel(
-      imgUrl: 'assets/images/forest.jpg',
+      imgUrl: 'assets/images/vocabs/hotel/receptionist.jpg',
       eng: 'For·est',
       engPron: 'ˈfôrəst',
       ind: 'Hutan',
@@ -42,7 +42,7 @@ final List<VocabHotel> vocabsforest = [
       example:
           'Tropical rain forests used to cover 10% of the earth`s surface.'),
   VocabHotel(
-      imgUrl: 'assets/images/forest.jpg',
+      imgUrl: 'assets/images/vocabs/hotel/security.jpg',
       eng: 'For·est',
       engPron: 'ˈfôrəst',
       ind: 'Hutan',
