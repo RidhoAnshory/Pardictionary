@@ -78,7 +78,7 @@ class _VocabularyDetailHutanState extends State<VocabularyDetailHutan> {
 void _showModal(BuildContext context) {
   showModalBottomSheet(
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(30.0),
+        borderRadius: BorderRadius.circular(20.0),
       ),
       context: context,
       builder: (builder) {
@@ -89,8 +89,8 @@ void _showModal(BuildContext context) {
               decoration: new BoxDecoration(
                   color: Colors.white,
                   borderRadius: new BorderRadius.only(
-                      topLeft: const Radius.circular(10.0),
-                      topRight: const Radius.circular(10.0))),
+                      topLeft: const Radius.circular(20.0),
+                      topRight: const Radius.circular(20.0))),
               child: new Center(
                 child: new Text("This is a modal sheet"),
               )),
