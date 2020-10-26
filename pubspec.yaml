@@ -50,8 +50,11 @@ flutter:
     - assets/images/
     - assets/images/vocabs/hutan/
     - assets/images/vocabs/hotel/
+    - assets/images/vocabs/gunung/
+    - assets/images/vocabs/pantai/
+    - assets/images/vocabs/tourism/
+    - assets/images/greetings/
 
-    
 
 
 

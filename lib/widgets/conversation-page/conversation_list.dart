@@ -14,45 +14,60 @@ class ConversationList extends StatelessWidget {
             //     context, MaterialPageRoute(builder: (context) => VocabPage()));
           },
           child: Card(
-            clipBehavior: Clip.antiAliasWithSaveLayer,
-            color: Colors.transparent,
-            elevation: 0,
-            child: Container(
-              decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage("assets/images/vocabs/hotel/lobby.jpg"),
-                    fit: BoxFit.fitWidth,
-                    alignment: Alignment.topCenter,
-                  ),
-                  borderRadius: new BorderRadius.circular(20.0)),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  new ListTile(
-                    title: Text(
-                      'Vocabulary',
-                      style: TextStyle(
-                          color: Colors.white, fontWeight: FontWeight.bold),
+              clipBehavior: Clip.antiAliasWithSaveLayer,
+              color: Colors.transparent,
+              elevation: 0,
+              child: Stack(
+                children: <Widget>[
+                  Opacity(
+                    opacity: 1.0,
+                    child: Container(
+                      height: 150,
+                      decoration: BoxDecoration(
+                          color: Colors.black,
+                          image: DecorationImage(
+                            image: AssetImage(
+                                "assets/images/greetings/greetimage.png"),
+                            fit: BoxFit.cover,
+                            colorFilter: ColorFilter.mode(
+                                Colors.black.withOpacity(0.5),
+                                BlendMode.dstATop),
+                            alignment: Alignment.topCenter,
+                          ),
+                          borderRadius: new BorderRadius.circular(20.0)),
                     ),
-                    subtitle:
-                        Text('KosaKata', style: TextStyle(color: Colors.white)),
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Container(
-                          padding: const EdgeInsets.all(15),
-                          child: Icon(
-                            Icons.book,
-                            color: Colors.white,
-                            size: 40,
-                          )),
-                    ],
-                  )
+                  Container(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        new ListTile(
+                          title: Text(
+                            'Vocabulary',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold),
+                          ),
+                          subtitle: Text('KosaKata',
+                              style: TextStyle(color: Colors.white)),
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            Container(
+                                padding: const EdgeInsets.all(15),
+                                child: Icon(
+                                  Icons.book,
+                                  color: Colors.white,
+                                  size: 40,
+                                )),
+                          ],
+                        )
+                      ],
+                    ),
+                  ),
                 ],
-              ),
-            ),
-          ),
+              )),
         ),
         InkWell(
           onTap: () {

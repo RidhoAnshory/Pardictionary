@@ -63,7 +63,7 @@ class _VocabularyDetailTourismState extends State<VocabularyDetailTourism> {
                       child: Image(
                         height: 110,
                         image: AssetImage(vocabTourism.imgUrl),
-                        fit: BoxFit.cover,
+                        fit: BoxFit.fitWidth,
                       ),
                     ),
                   ),
