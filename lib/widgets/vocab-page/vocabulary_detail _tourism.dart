@@ -1,15 +1,18 @@
 import 'package:Pardictionary/models/vocab_forest_model.dart';
+import 'package:Pardictionary/models/vocab_gunung_model.dart';
+import 'package:Pardictionary/models/vocab_tourism_model.dart';
 import 'package:flutter/material.dart';
 import 'package:toast/toast.dart';
 
-class VocabularyDetailHutan extends StatefulWidget {
-  const VocabularyDetailHutan({Key key}) : super(key: key);
+class VocabularyDetailTourism extends StatefulWidget {
+  const VocabularyDetailTourism({Key key}) : super(key: key);
 
   @override
-  _VocabularyDetailHutanState createState() => _VocabularyDetailHutanState();
+  _VocabularyDetailTourismState createState() =>
+      _VocabularyDetailTourismState();
 }
 
-class _VocabularyDetailHutanState extends State<VocabularyDetailHutan> {
+class _VocabularyDetailTourismState extends State<VocabularyDetailTourism> {
   // Future<void> _handleClickMe() async {
   //   return showDialog<void>(
   //     context: context,
@@ -27,22 +30,22 @@ class _VocabularyDetailHutanState extends State<VocabularyDetailHutan> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Hutan'),
+        title: Text('Tourism'),
         elevation: 0,
       ),
       body: new GridView.builder(
         padding: const EdgeInsets.all(15),
-        itemCount: vocabsforest.length,
+        itemCount: vocabstourism.length,
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
           crossAxisSpacing: 10,
           mainAxisSpacing: 10,
         ),
         itemBuilder: (BuildContext context, int index) {
-          VocabForest vocabForest = vocabsforest[index];
+          VocabTourism vocabTourism = vocabstourism[index];
           return InkWell(
             onTap: () {
-              _showModal(context);
+              _showModal(context, vocabTourism.eng);
             },
             child: Card(
               shape: RoundedRectangleBorder(
@@ -59,12 +62,12 @@ class _VocabularyDetailHutanState extends State<VocabularyDetailHutan> {
                       borderRadius: BorderRadius.circular(20.0),
                       child: Image(
                         height: 110,
-                        image: AssetImage(vocabForest.imgUrl),
+                        image: AssetImage(vocabTourism.imgUrl),
                         fit: BoxFit.cover,
                       ),
                     ),
                   ),
-                  Text(vocabForest.eng)
+                  Text(vocabTourism.eng)
                 ],
               ),
             ),
@@ -75,7 +78,7 @@ class _VocabularyDetailHutanState extends State<VocabularyDetailHutan> {
   }
 }
 
-void _showModal(BuildContext context) {
+void _showModal(BuildContext context, String title) {
   showModalBottomSheet(
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(20.0),
@@ -92,7 +95,7 @@ void _showModal(BuildContext context) {
                       topLeft: const Radius.circular(20.0),
                       topRight: const Radius.circular(20.0))),
               child: new Center(
-                child: new Text("This is a modal sheet"),
+                child: new Text(title),
               )),
         );
       });

@@ -1,15 +1,17 @@
 import 'package:Pardictionary/models/vocab_forest_model.dart';
+import 'package:Pardictionary/models/vocab_hotel_model.dart';
+import 'package:Pardictionary/models/vocab_pantai_model.dart';
 import 'package:flutter/material.dart';
 import 'package:toast/toast.dart';
 
-class VocabularyDetailHutan extends StatefulWidget {
-  const VocabularyDetailHutan({Key key}) : super(key: key);
+class VocabularyDetailPantai extends StatefulWidget {
+  const VocabularyDetailPantai({Key key}) : super(key: key);
 
   @override
-  _VocabularyDetailHutanState createState() => _VocabularyDetailHutanState();
+  _VocabularyDetailPantaiState createState() => _VocabularyDetailPantaiState();
 }
 
-class _VocabularyDetailHutanState extends State<VocabularyDetailHutan> {
+class _VocabularyDetailPantaiState extends State<VocabularyDetailPantai> {
   // Future<void> _handleClickMe() async {
   //   return showDialog<void>(
   //     context: context,
@@ -27,19 +29,19 @@ class _VocabularyDetailHutanState extends State<VocabularyDetailHutan> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Hutan'),
+        title: Text('Pantai'),
         elevation: 0,
       ),
       body: new GridView.builder(
         padding: const EdgeInsets.all(15),
-        itemCount: vocabsforest.length,
+        itemCount: vocabspantai.length,
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
           crossAxisSpacing: 10,
           mainAxisSpacing: 10,
         ),
         itemBuilder: (BuildContext context, int index) {
-          VocabForest vocabForest = vocabsforest[index];
+          VocabPantai vocabPantai = vocabspantai[index];
           return InkWell(
             onTap: () {
               _showModal(context);
@@ -59,12 +61,12 @@ class _VocabularyDetailHutanState extends State<VocabularyDetailHutan> {
                       borderRadius: BorderRadius.circular(20.0),
                       child: Image(
                         height: 110,
-                        image: AssetImage(vocabForest.imgUrl),
+                        image: AssetImage(vocabPantai.imgUrl),
                         fit: BoxFit.cover,
                       ),
                     ),
                   ),
-                  Text(vocabForest.eng)
+                  Text(vocabPantai.eng)
                 ],
               ),
             ),

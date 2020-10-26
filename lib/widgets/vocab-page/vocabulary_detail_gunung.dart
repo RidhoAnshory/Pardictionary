@@ -1,15 +1,16 @@
 import 'package:Pardictionary/models/vocab_forest_model.dart';
+import 'package:Pardictionary/models/vocab_gunung_model.dart';
 import 'package:flutter/material.dart';
 import 'package:toast/toast.dart';
 
-class VocabularyDetailHutan extends StatefulWidget {
-  const VocabularyDetailHutan({Key key}) : super(key: key);
+class VocabularyDetailGunung extends StatefulWidget {
+  const VocabularyDetailGunung({Key key}) : super(key: key);
 
   @override
-  _VocabularyDetailHutanState createState() => _VocabularyDetailHutanState();
+  _VocabularyDetailGunungState createState() => _VocabularyDetailGunungState();
 }
 
-class _VocabularyDetailHutanState extends State<VocabularyDetailHutan> {
+class _VocabularyDetailGunungState extends State<VocabularyDetailGunung> {
   // Future<void> _handleClickMe() async {
   //   return showDialog<void>(
   //     context: context,
@@ -32,17 +33,17 @@ class _VocabularyDetailHutanState extends State<VocabularyDetailHutan> {
       ),
       body: new GridView.builder(
         padding: const EdgeInsets.all(15),
-        itemCount: vocabsforest.length,
+        itemCount: vocabsgunung.length,
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
           crossAxisSpacing: 10,
           mainAxisSpacing: 10,
         ),
         itemBuilder: (BuildContext context, int index) {
-          VocabForest vocabForest = vocabsforest[index];
+          VocabGunung vocabGunung = vocabsgunung[index];
           return InkWell(
             onTap: () {
-              _showModal(context);
+              _showModal(context, vocabGunung.eng);
             },
             child: Card(
               shape: RoundedRectangleBorder(
@@ -59,12 +60,12 @@ class _VocabularyDetailHutanState extends State<VocabularyDetailHutan> {
                       borderRadius: BorderRadius.circular(20.0),
                       child: Image(
                         height: 110,
-                        image: AssetImage(vocabForest.imgUrl),
+                        image: AssetImage(vocabGunung.imgUrl),
                         fit: BoxFit.cover,
                       ),
                     ),
                   ),
-                  Text(vocabForest.eng)
+                  Text(vocabGunung.eng)
                 ],
               ),
             ),
@@ -75,7 +76,7 @@ class _VocabularyDetailHutanState extends State<VocabularyDetailHutan> {
   }
 }
 
-void _showModal(BuildContext context) {
+void _showModal(BuildContext context, String title) {
   showModalBottomSheet(
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(20.0),
@@ -92,7 +93,7 @@ void _showModal(BuildContext context) {
                       topLeft: const Radius.circular(20.0),
                       topRight: const Radius.circular(20.0))),
               child: new Center(
-                child: new Text("This is a modal sheet"),
+                child: new Text(title),
               )),
         );
       });

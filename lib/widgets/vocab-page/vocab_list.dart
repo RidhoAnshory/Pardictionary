@@ -1,3 +1,9 @@
+import 'package:Pardictionary/models/vocab_hotel_model.dart';
+import 'package:Pardictionary/widgets/vocab-page/vocabulary_detail%20_tourism.dart';
+import 'package:Pardictionary/widgets/vocab-page/vocabulary_detail_gunung.dart';
+import 'package:Pardictionary/widgets/vocab-page/vocabulary_detail_hotel.dart';
+import 'package:Pardictionary/widgets/vocab-page/vocabulary_detail_pantai.dart';
+
 import 'vocabulary_detail_hutan.dart';
 import 'package:flutter/material.dart';
 
@@ -12,7 +18,9 @@ class VocabularyList extends StatelessWidget {
         InkWell(
           onTap: () {
             Navigator.push(
-                context, MaterialPageRoute(builder: (context) => VocabularyDetailHutan()));
+                context,
+                MaterialPageRoute(
+                    builder: (context) => VocabularyDetailHutan()));
           },
           child: Card(
             color: Colors.greenAccent[400],
@@ -46,9 +54,10 @@ class VocabularyList extends StatelessWidget {
         ),
         InkWell(
           onTap: () {
-            // Navigator.push(
-            //     context, MaterialPageRoute(builder: (context) => VocabPage()));
-            //
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => VocabularyDetailTourism()));
           },
           child: Card(
             color: Colors.greenAccent[400],
@@ -57,7 +66,7 @@ class VocabularyList extends StatelessWidget {
               children: [
                 new ListTile(
                   title: Text(
-                    'Pantai',
+                    'Tourism',
                     style: TextStyle(
                         color: Colors.white, fontWeight: FontWeight.bold),
                   ),
@@ -82,9 +91,10 @@ class VocabularyList extends StatelessWidget {
         ),
         InkWell(
           onTap: () {
-            // Navigator.push(
-            //     context, MaterialPageRoute(builder: (context) => VocabPage()));
-            //
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => VocabularyDetailGunung()));
           },
           child: Card(
             color: Colors.greenAccent[400],
@@ -118,9 +128,10 @@ class VocabularyList extends StatelessWidget {
         ),
         InkWell(
           onTap: () {
-            // Navigator.push(
-            //     context, MaterialPageRoute(builder: (context) => VocabPage()));
-            //
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => VocabularyDetailHotel()));
           },
           child: Card(
             color: Colors.greenAccent[400],
@@ -129,7 +140,7 @@ class VocabularyList extends StatelessWidget {
               children: [
                 new ListTile(
                   title: Text(
-                    'Rawa',
+                    'Hotel',
                     style: TextStyle(
                         color: Colors.white, fontWeight: FontWeight.bold),
                   ),
@@ -154,9 +165,10 @@ class VocabularyList extends StatelessWidget {
         ),
         InkWell(
           onTap: () {
-            // Navigator.push(
-            //     context, MaterialPageRoute(builder: (context) => VocabPage()));
-            //
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => VocabularyDetailPantai()));
           },
           child: Card(
             color: Colors.greenAccent[400],
@@ -165,7 +177,7 @@ class VocabularyList extends StatelessWidget {
               children: [
                 new ListTile(
                   title: Text(
-                    'Vocabulary',
+                    'Pantai',
                     style: TextStyle(
                         color: Colors.white, fontWeight: FontWeight.bold),
                   ),
